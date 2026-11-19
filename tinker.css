@@ -25,28 +25,6 @@ h2 {
     font-size: 30px;
 }
 
-.big-font {
-    font-family: 'Pusab';
-    -webkit-text-stroke: 0.05em black;
-    filter: drop-shadow(0.05em 0.05em 0px rgba(0, 0, 0, 0.35));
-    line-height: 1;
-}
-
-.gold-font {
-    font-family: 'Pusab';
-    -webkit-text-stroke: 0.04em black;
-    filter: drop-shadow(0.03em 0.03em 0px rgba(0, 0, 0, 0.35));
-    line-height: 1;
-
-    background-image: -webkit-linear-gradient(#fda00c, #ffe348);
-
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
 body {
     display: flex;
     align-items: center;
@@ -230,4 +208,26 @@ body {
 
 #content > *:nth-child(even) {
     background-color: #15141b;
+}
+
+.big-font {
+    font-family: 'Pusab';
+    -webkit-text-stroke: 0.05em black;
+    filter: drop-shadow(0.05em 0.05em 0px rgba(0, 0, 0, 0.35));
+    line-height: 1;
+}
+
+.gold-font {
+    font-family: 'Pusab';
+    -webkit-text-stroke: 0.04em black;
+    filter: drop-shadow(0.03em 0.03em 0px rgba(0, 0, 0, 0.35));
+    line-height: 1;
+
+    background-image: -webkit-linear-gradient(#fda00c, #ffe348);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
