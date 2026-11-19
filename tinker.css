@@ -96,7 +96,7 @@ body {
 .CCMenuItemSpriteExtra {
     display: inline-block;
     user-select: none;
-    transition: transform 0s scale(1);
+    transition: transform 0s;
 }
 
 .CCMenuItemSpriteExtra:active {
@@ -212,16 +212,22 @@ body {
 
 .big-font {
     font-family: 'Pusab';
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    --stroke-size: 0.05em;
     -webkit-text-stroke: 0.05em black;
-    filter: drop-shadow(0.05em 0.05em 0px rgba(0, 0, 0, 0.35));
-    line-height: 1;
+    filter: drop-shadow(0.06em 0.06em 0px rgba(0, 0, 0, 0.35));
+    line-height: 100%;
 }
 
 .gold-font {
     font-family: 'Pusab';
-    -webkit-text-stroke: 0.04em black;
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    --stroke-size: 0.05em;
+    -webkit-text-stroke: 0.05em black;
     filter: drop-shadow(0.03em 0.03em 0px rgba(0, 0, 0, 0.35));
-    line-height: 1;
+    line-height: 100%;
 
     background-image: -webkit-linear-gradient(#fda00c, #ffe348);
 
