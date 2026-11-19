@@ -10,6 +10,8 @@
 html, body {
     margin: 0;
     padding: 0;
+    overscroll-behavior: none;
+    touch-action: none;
 }
 
 p, h1, h2, a {
