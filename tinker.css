@@ -237,3 +237,23 @@ body {
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
+
+@media (max-width: 768px) {
+    body {
+        zoom: 0.6;
+        height: calc(100svh / 0.6);
+    }
+
+    .sidebar-layer a {
+        font-size: 25px;
+    }
+
+    .left-content-layer {
+        width: 275px;
+        height: calc(90svh / 0.6);
+    }
+
+    .right-content-layer {
+        height: calc(90svh / 0.6);
+    }
+}
