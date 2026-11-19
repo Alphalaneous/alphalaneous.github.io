@@ -17,6 +17,14 @@ p, h1, h2, a {
     font-family: 'Arial';
 }
 
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
 .big-font {
     font-family: 'Pusab';
     -webkit-text-stroke: 0.05em black;
@@ -37,14 +45,6 @@ p, h1, h2, a {
 
     -webkit-text-fill-color: transparent;
     color: transparent;
-}
-
-h1 {
-    font-size: 45px;
-}
-
-h2 {
-    font-size: 30px;
 }
 
 body {
