@@ -106,6 +106,27 @@ function setupSite(data) {
     const sections = data.settings;
 
     const sidebar = document.getElementById("sidebar");
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const leftContent = document.getElementById("left-content-layer");
+    const rightContent = document.getElementById("right-content-layer");
+
+    toggleBtn.addEventListener('click', () => {
+        leftContent.classList.toggle("hidden");
+        rightContent.classList.toggle("hidden");
+    });
+
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+    function syncMenuState(e) {
+        leftContent.classList.toggle("hidden", e.matches);
+        if (!e.matches) {
+            leftContent.classList.toggle("hidden", false);
+            rightContent.classList.toggle("hidden", false);
+        }
+    }
+
+    syncMenuState(mobileQuery);
+    mobileQuery.addEventListener('change', syncMenuState);
 
     var name = "";
 
@@ -135,6 +156,12 @@ function setupSite(data) {
 
         link.addEventListener("click", event => {
             event.preventDefault();
+            const mobileQuery = window.matchMedia('(max-width: 768px)');
+            if (mobileQuery.matches) {
+                leftContent.classList.toggle("hidden", true);
+                rightContent.classList.toggle("hidden", false);
+            }
+
             selectSection(key, sections);
         });
 
