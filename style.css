@@ -1,7 +1,7 @@
 /* This CSS is a mess, I'm new to this */
 
 :root {
-    --bg: #999edf;
+    --bg: #939393;
     --text: #fefefe;
     --max: 850px;
     --accent: #0b74de;
@@ -61,7 +61,8 @@ details > :not(summary) {
 .container {
     max-width: var(--max);
     margin: 0 auto;
-    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .alternatives-container {
