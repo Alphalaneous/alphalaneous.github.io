@@ -177,6 +177,12 @@ function setupSite(data) {
     if (slice.length !== 0) {
         name = slice + "-title";
     }
+    else {
+        if (mobileQuery.matches) {
+            leftContent.classList.toggle("hidden", false);
+            rightContent.classList.toggle("hidden", true);
+        }
+    }
 
     selectSection(name, sections);
 }
