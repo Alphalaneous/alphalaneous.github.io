@@ -79,7 +79,7 @@ function selectSection(name, sections) {
 
     if (!section || sectionsToSkip.includes(sectionKey)) {
         title.textContent = "Whoops";
-        description.textContent = "<p>Section not found!</p>";
+        description.textContent = "Section not found!";
         content.innerHTML = "";
         return;
     }
@@ -107,6 +107,8 @@ function setupSite(data) {
 
     const sidebar = document.getElementById("sidebar");
 
+    var name = "";
+
     for (const [key, value] of Object.entries(sections)) {
         const split = key.split("-");
         const ending = split.at(-1);
@@ -117,6 +119,10 @@ function setupSite(data) {
 
         if (sectionsToSkip.includes(remaining)) {
             continue;
+        }
+
+        if (name.length === 0) {
+            name = key;
         }
 
         const link = document.createElement("a");
@@ -140,7 +146,11 @@ function setupSite(data) {
         selectSection(name, sections);
     });
 
-    const name = location.hash.slice(1) + "-title";
+    const slice = location.hash.slice(1);
+    if (slice.length !== 0) {
+        name = slice + "-title";
+    }
+
     selectSection(name, sections);
 }
 
